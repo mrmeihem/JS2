@@ -1,0 +1,56 @@
+$max_width: 1140px;
+$basic_color: #222;
+$bkg_color: #f5f5f5;
+
+
+@import "_reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    color: $basic_color;
+    background-color: $bkg_color;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $max_width;
+    padding:0 10px;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #222;
+}
+
+.menu {
+    display: none;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 320px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
