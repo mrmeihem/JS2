@@ -3,9 +3,8 @@ const products = [
     { id: 2, title: 'Mouse', price: 20, picture: 'https://picsum.photos/300?random=2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
     { id: 3, title: 'Keyboard', price: 200, picture: 'https://picsum.photos/300?random=3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
     { id: 4, title: 'Gamepad', price: 50, picture: 'https://picsum.photos/300?random=4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    {}
-    ,
-    {}
+    {},
+    {},
 ];
 //Функция для формирования верстки каждого товара
 const renderProduct = (id = 'default', title = 'default', price = '100', picture = 'https://picsum.photos/300?random=5&grayscale&blur=10', description = 'Product description') => {
