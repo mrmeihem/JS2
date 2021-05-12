@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger calc</title>
+</head>
+
+<body>
+    <script>
+        // Declaring menu
+        const menu = {
+            burgerSizes: [
+                {
+                    name: 'small',
+                    price: 20,
+                    calories: 20
+                },
+                {
+                    name: 'big',
+                    price: 100,
+                    calories: 40
+                }
+            ],
+            burgerFillings: [
+                {
+                    name: 'cheese',
+                    price: 10,
+                    calories: 20,
+                },
+                {
+                    name: 'salad',
+                    price: 20,
+                    calories: 5,
+                },
+                {
+                    name: 'potato',
+                    price: 15,
+                    calories: 10,
+                },
+            ],
+            burgerSpices: [
+                {
+                    name: 'not spices',
+                    price: 0,
+                    calories: 0,
+                },
+                {
+                    name: 'spiced',
+                    price: 15,
+                    calories: 0,
+                },
+            ],
+            burgerSauces: [
+                {
+                    name: 'no mayo',
+                    price: 0,
+                    calories: 0,
+                },
+                {
+                    name: 'mayo',
+                    price: 20,
+                    calories: 5,
+                },
+            ],
+        }
+
+        class Hamburger {
+            constructor(burgerSize = 0, burgerFilling = 0, burgerSpice = 0, burgerSauce = 0) {
+                this.burgerSize = burgerSize;
+                this.burgerFilling = burgerFilling;
+                this.burgerSpice = burgerSpice;
+                this.burgerSauce = burgerSauce;
+            }
+
+            getSize() {
+                return menu.burgerSizes[this.burgerSize].name;
+            }
+
+            getburgerFilling() {
+                return menu.burgerFillings[this.burgerFilling].name;
+            }
+
+            getBurgerSpice() {
+                return menu.burgerSpices[this.burgerSpice].name;
+            }
+
+            getBurgerSauce() {
+                return menu.burgerSauces[this.burgerSauce].name;
+            }
+
+            calculatePrice() {
+                let totalPrice = 0;
+
+                // Tricky method of getting price by enumeratating menu elements. content.slice(0, -1) makes "burgerSize" from "burgerSizes" in const.
+                for (const content in menu) {
+                    totalPrice += menu[content][this[content.slice(0, -1)]].price;
+                }
+                return totalPrice;
+            }
+
+            calculateCalories() {
+                let totalCalories = 0;
+                for (const content in menu) {
+                    totalCalories += menu[content][this[content.slice(0, -1)]].calories;
+                }
+                return totalCalories;
+            }
+        }
+
+        let myHamburger = new Hamburger(1, 0, 1, 1);
+
+        console.log(`You've ordered ${myHamburger.getSize()} hamburger. Its comes with ${myHamburger.getburgerFilling()} filling, ${myHamburger.getBurgerSauce()} and its ${myHamburger.getBurgerSpice()}. The hamburger have ${myHamburger.calculateCalories()} kcal. The price is $${myHamburger.calculatePrice()}.`);
+    </script>
+</body>
+
+</html>
