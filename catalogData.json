@@ -1,12 +1,27 @@
 [
   {
-    "id_product": 123,
+    "id_product": 001,
     "product_name": "Ноутбук",
     "price": 45600
   },
   {
-    "id_product": 456,
+    "id_product": 002,
     "product_name": "Мышка",
     "price": 1000
+  }
+  {
+    "id_product": 003,
+    "product_name": "Видеокарта",
+    "price": 65300
+  },
+  {
+    "id_product": 004,
+    "product_name": "Материнская плата",
+    "price": 25000
+  }
+  {
+    "id_product": 005,
+    "product_name": "Клавиатура",
+    "price": 3000
   }
 ]
