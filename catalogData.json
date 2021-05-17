@@ -8,7 +8,7 @@
     "id_product": 002,
     "product_name": "Мышка",
     "price": 1000
-  }
+  },
   {
     "id_product": 003,
     "product_name": "Видеокарта",
@@ -18,7 +18,7 @@
     "id_product": 004,
     "product_name": "Материнская плата",
     "price": 25000
-  }
+  },
   {
     "id_product": 005,
     "product_name": "Клавиатура",
