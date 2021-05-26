@@ -12,11 +12,10 @@ const app = new Vue({
         show: false,
         emptyCart: false,
         cartUrl: '/getBasket.json',
-        cartProducts: [],
+        cartProducts: {},
 
     },
     computed: {
-
     },
     methods: {
         getJson(url){
@@ -40,6 +39,12 @@ const app = new Vue({
             this.show = !this.show;
             console.log(this.show);
         },
+        removeProduct(id){
+            this.cartProducts.contents = this.cartProducts.contents.filter(product => product.id_product !== id);
+            if (this.cartProducts.contents.length === 0) {
+                this.emptyCart = true;
+            }
+        }
     },
     mounted(){
         this.getJson(`${API + this.catalogUrl}`)
@@ -58,8 +63,13 @@ const app = new Vue({
         console.log(this.filtered);
         // Cart - отсюда
         this.getJson(`${API + this.cartUrl}`)
-            .then(data => JSON.parse(data));
-            console.log(this.cartProducts);
+            .then(data => {
+               this.cartProducts = data;
+                if (this.cartProducts.contents.length === 0) {
+                    this.emptyCart = true;
+                }
+            });
+
     },
 })
 
