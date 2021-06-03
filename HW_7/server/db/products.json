@@ -1,0 +1,56 @@
+[
+  {
+    "id_product": 11,
+    "product_name": "Backpack white",
+    "img_product": "img/product-01.jpg",
+    "price": 7500
+  },
+  {
+    "id_product": 12,
+    "product_name": "Stripe t-shirt",
+    "img_product": "img/product-07.jpg",
+    "price": 12800
+  },
+  {
+      "id_product": 13,
+      "product_name": "Stupid hat",
+      "img_product": "img/product-03.jpg",
+      "price": 5380
+  },
+  {
+      "id_product": 14,
+      "product_name": "Yellow jeans",
+      "img_product": "img/product-04.jpg",
+      "price": 10100
+  },
+  {
+      "id_product": 15,
+      "product_name": "Smily N",
+      "img_product": "img/product-08.jpg",
+      "price": 6000
+  },
+  {
+      "id_product": 16,
+      "product_name": "Baseball hat",
+      "img_product": "img/product-09.jpg",
+      "price": 37000
+  },
+  {
+      "id_product": 17,
+      "product_name": "White shirt",
+      "img_product": "img/product-10.jpg",
+      "price": 3500
+  },
+  {
+      "id_product": 18,
+      "product_name": "Doggy man",
+      "img_product": "img/product-11.jpg",
+      "price": 27550
+  },
+  {
+      "id_product": 19,
+      "product_name": "Thinkerbell",
+      "img_product": "img/product-12.jpg",
+      "price": 350
+  }
+]

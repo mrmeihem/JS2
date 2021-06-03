@@ -1,0 +1,34 @@
+{
+    "amount": 20380,
+    "countGoods": 3,
+    "contents": [
+        {
+            "id_product": 11,
+            "product_name": "Backpack white",
+            "img_product": "img/product-01.jpg",
+            "price": 7500,
+            "quantity": 6
+        },
+        {
+            "id_product": 13,
+            "product_name": "Stupid hat",
+            "img_product": "img/product-03.jpg",
+            "price": 5380,
+            "quantity": 3
+        },
+        {
+            "quantity": 5,
+            "id_product": 12,
+            "product_name": "Stripe t-shirt",
+            "img_product": "img/product-07.jpg",
+            "price": 12800
+        },
+        {
+            "quantity": 3,
+            "id_product": 16,
+            "product_name": "Baseball hat",
+            "img_product": "img/product-09.jpg",
+            "price": 37000
+        }
+    ]
+}
