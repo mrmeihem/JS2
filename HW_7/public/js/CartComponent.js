@@ -61,15 +61,13 @@ Vue.component('cart', {
             <h2 v-if=" cartItems.length === 0">Корзина пуста</h2>
             <div v-else>
                 <div class="cart-block">      
-                    <cart-item v-for="item of cartItems" :key="item.id_product" :img="item.imgPath" :cart-item="item" :cart-count = "cartCount"
-                    :cart-summ = "cartSumm" @remove="remove" @add-product="addProduct">
+                    <cart-item v-for="item of cartItems" :key="item.id_product" :img="item.imgPath" :cart-item="item" @remove="remove" @add-product="addProduct">
                     </cart-item>
                     <hr>
                     <h3><b>Grand Total:</b> {{ this.cartItems.reduce((summ, item) => summ + item.quantity*item.price, 0) }}</h3>
                 </div>  
             </div>
         </div>
-
     </div>
     `
 });
